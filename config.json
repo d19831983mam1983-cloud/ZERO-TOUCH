@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "schema_version": 1,
+  "payload": {
+    "max_fps": 144,
+    "voice_enabled": true,
+    "capsules": [
+      {
+        "id": "extreme",
+        "label": "1 · ТЕЛЕПОРТ УЛЬТРА",
+        "badge": "QUANTUM SNAP • 68.0X",
+        "description": "Экстремальный квантовый телепорт. Сглаживание убито в ноль. Прицел прыгает чёткими пиксельными рывками без инерции.",
+        "enabled": true,
+        "confirm": false,
+        "requires": "shizuku",
+        "order": 1,
+        "section": "aim_profiles",
+        "commands": [
+          "settings put system pointer_speed 14",
+          "settings put system touch_slop 0",
+          "settings put secure touch_blocking_period 0.0",
+          "settings put secure tap_duration_threshold 0.0",
+          "settings put secure long_press_timeout 250",
+          "settings put secure multi_press_timeout 150",
+          "settings put system motion_engine_enabled 0",
+          "settings put global window_animation_scale 0.0",
+          "settings put global transition_animation_scale 0.0",
+          "settings put global animator_duration_scale 0.0",
+          "settings put global block_untrusted_touches 0"
+        ]
+      },
+      {
+        "id": "rog_pro",
+        "label": "2 · КОНФИГ ROG PHONE",
+        "badge": "ASUS ROG • 720HZ X-MODE",
+        "description": "Сенса игрового смартфона ASUS ROG Phone 8/9 Pro: сверхрезкий срыв с места, агрессивные края и мгновенный флик без задержки.",
+        "enabled": true,
+        "confirm": false,
+        "requires": "shizuku",
+        "order": 2,
+        "section": "aim_profiles",
+        "commands": [
+          "settings put system pointer_speed 14",
+          "settings put system touch_slop 0",
+          "settings put secure touch_blocking_period 0.0",
+          "settings put secure tap_duration_threshold 0.0",
+          "settings put secure multi_press_timeout 150",
+          "settings put system motion_engine_enabled 0",
+          "settings put system peak_refresh_rate 120.0",
+          "settings put system min_refresh_rate 120.0",
+          "settings put global block_untrusted_touches 0"
+        ]
+      },
+      {
+        "id": "ios_pro",
+        "label": "3 · КОНФИГ iOS",
+        "badge": "IPHONE 16 PRO / IPAD • 240HZ",
+        "description": "Точная копия сенсы iOS ProMotion: идеально линейная траектория без инерции Android и плотная фиксация спрея в голову.",
+        "enabled": true,
+        "confirm": false,
+        "requires": "shizuku",
+        "order": 3,
+        "section": "aim_profiles",
+        "commands": [
+          "settings put system pointer_speed 12",
+          "settings put system touch_slop 2",
+          "settings put secure touch_blocking_period 0.0",
+          "settings put secure tap_duration_threshold 0.0",
+          "settings put secure multi_press_timeout 150",
+          "settings put system motion_engine_enabled 0",
+          "settings put global block_untrusted_touches 0"
+        ]
+      },
+      {
+        "id": "budget_pro",
+        "label": "4 · ДЛЯ БЮДЖЕТОК И A57",
+        "badge": "ANTI-LAG FPS • 48.0X",
+        "description": "Резкая телепорт-сенса + защита от просадок FPS на Samsung A57/A55, Redmi, Poco и Realme (SkiaGL кэш 72MB).",
+        "enabled": true,
+        "confirm": false,
+        "requires": "shizuku",
+        "order": 4,
+        "section": "aim_profiles",
+        "commands": [
+          "settings put system pointer_speed 13",
+          "settings put system touch_slop 1",
+          "settings put secure touch_blocking_period 0.0",
+          "settings put secure tap_duration_threshold 0.0",
+          "settings put system motion_engine_enabled 0",
+          "settings put global window_animation_scale 0.0",
+          "settings put global transition_animation_scale 0.0",
+          "settings put global animator_duration_scale 0.0",
+          "settings put global block_untrusted_touches 0",
+          "cmd activity kill-all"
+        ]
+      }
+    ]
+  }
+}
