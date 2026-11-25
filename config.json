@@ -1,5 +1,5 @@
 {
-  "version": 5,
+  "version": 6,
   "schema_version": 1,
   "payload": {
     "max_fps": 144,
@@ -144,6 +144,31 @@
           "settings put global animator_duration_scale 0.0",
           "settings put global block_untrusted_touches 0",
           "cmd activity kill-all"
+        ]
+      },
+      {
+        "id": "tablet_pro",
+        "label": "7 · КОНФИГ ПЛАНШЕТ (PAD PRO)",
+        "badge": "ANDROID PAD / IPAD • 144HZ",
+        "description": "Специальный профиль под планшеты (Xiaomi Pad, Samsung Tab, Poco Pad, Lenovo Y700): адаптированный шаг сенсы под большой экран и нулевая задержка.",
+        "enabled": true,
+        "confirm": false,
+        "requires": "shizuku",
+        "order": 7,
+        "section": "aim_profiles",
+        "commands": [
+          "settings put system pointer_speed 7",
+          "settings put system touch_slop 0",
+          "settings put secure touch_blocking_period 0.0",
+          "settings put secure tap_duration_threshold 0.0",
+          "settings put secure multi_press_timeout 120",
+          "settings put system motion_engine_enabled 0",
+          "settings put global window_animation_scale 0.0",
+          "settings put global transition_animation_scale 0.0",
+          "settings put global animator_duration_scale 0.0",
+          "settings put global block_untrusted_touches 0",
+          "setprop debug.input.resample 0",
+          "setprop debug.input.batching 0"
         ]
       }
     ]
