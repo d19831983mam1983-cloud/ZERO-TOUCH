@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "schema_version": 1,
   "payload": {
     "max_fps": 144,
@@ -57,14 +57,44 @@
         ]
       },
       {
+        "id": "quantum_chunks",
+        "label": "3 · КВАНТОВЫЕ КУСКИ (RAW EVDEV)",
+        "badge": "ZERO-INTERP • RAW INPUT",
+        "description": "Однокадровый квантовый импульс (куски 10–1000) с нулевым сглаживанием, прямым вводом и антиотдачей Pull-Down по оси Y.",
+        "enabled": true,
+        "confirm": false,
+        "requires": "shizuku",
+        "order": 3,
+        "section": "aim_profiles",
+        "commands": [
+          "settings put system pointer_speed 7",
+          "settings put system touch_slop 0",
+          "settings put secure touch_blocking_period 0.0",
+          "settings put secure tap_duration_threshold 0.0",
+          "settings put secure multi_press_timeout 100",
+          "settings put system motion_engine_enabled 0",
+          "settings put system teleport_chunks 150",
+          "settings put system teleport_recoil_step 14",
+          "settings put system teleport_recoil_delay 18",
+          "settings put global window_animation_scale 0.0",
+          "settings put global transition_animation_scale 0.0",
+          "settings put global animator_duration_scale 0.0",
+          "settings put global block_untrusted_touches 0",
+          "setprop debug.input.resample 0",
+          "setprop debug.input.batching 0",
+          "setprop debug.sf.disable_backpressure 1",
+          "device_config put input_native_boot deep_press_enabled false"
+        ]
+      },
+      {
         "id": "rog_pro",
-        "label": "3 · КОНФИГ ROG PHONE",
+        "label": "4 · КОНФИГ ROG PHONE",
         "badge": "ASUS ROG • 720HZ X-MODE",
         "description": "Сенса игрового смартфона ASUS ROG Phone 8/9 Pro: сверхрезкий срыв с места, агрессивные края и мгновенный флик без задержки.",
         "enabled": true,
         "confirm": false,
         "requires": "shizuku",
-        "order": 3,
+        "order": 4,
         "section": "aim_profiles",
         "commands": [
           "settings put system pointer_speed 7",
@@ -78,13 +108,13 @@
       },
       {
         "id": "ios_pro",
-        "label": "4 · КОНФИГ iOS",
+        "label": "5 · КОНФИГ iOS",
         "badge": "IPHONE 16 PRO / IPAD • 240HZ",
         "description": "Точная копия сенсы iOS ProMotion: идеально линейная траектория без инерции Android и плотная фиксация спрея в голову.",
         "enabled": true,
         "confirm": false,
         "requires": "shizuku",
-        "order": 4,
+        "order": 5,
         "section": "aim_profiles",
         "commands": [
           "settings put system pointer_speed 7",
@@ -98,13 +128,13 @@
       },
       {
         "id": "budget_pro",
-        "label": "5 · ДЛЯ БЮДЖЕТОК И A57",
+        "label": "6 · ДЛЯ БЮДЖЕТОК И A57",
         "badge": "ANTI-LAG FPS • 48.0X",
         "description": "Резкая телепорт-сенса + защита от просадок FPS на Samsung A57/A55, Redmi, Poco и Realme (SkiaGL кэш 72MB).",
         "enabled": true,
         "confirm": false,
         "requires": "shizuku",
-        "order": 5,
+        "order": 6,
         "section": "aim_profiles",
         "commands": [
           "settings put system pointer_speed 7",
