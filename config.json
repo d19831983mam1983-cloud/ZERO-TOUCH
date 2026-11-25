@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 5,
   "schema_version": 1,
   "payload": {
     "max_fps": 144,
@@ -58,9 +58,9 @@
       },
       {
         "id": "quantum_chunks",
-        "label": "3 · КВАНТОВЫЕ КУСКИ (RAW EVDEV)",
-        "badge": "ZERO-INTERP • RAW INPUT",
-        "description": "Однокадровый квантовый импульс (куски 10–1000) с нулевым сглаживанием, прямым вводом и антиотдачей Pull-Down по оси Y.",
+        "label": "3 · КВАНТОВЫЙ ОТКЛИК (ZERO-LAG)",
+        "badge": "ZERO-RESAMPLE • SHIZUKU",
+        "description": "Максимально чистый системный отклик касаний через Shizuku: отключён ресемплинг, батчинг ввода и задержка тача без оверлеев и макросов.",
         "enabled": true,
         "confirm": false,
         "requires": "shizuku",
@@ -73,9 +73,6 @@
           "settings put secure tap_duration_threshold 0.0",
           "settings put secure multi_press_timeout 100",
           "settings put system motion_engine_enabled 0",
-          "settings put system teleport_chunks 150",
-          "settings put system teleport_recoil_step 14",
-          "settings put system teleport_recoil_delay 18",
           "settings put global window_animation_scale 0.0",
           "settings put global transition_animation_scale 0.0",
           "settings put global animator_duration_scale 0.0",
