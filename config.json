@@ -16,7 +16,7 @@
         "order": 1,
         "section": "aim_profiles",
         "commands": [
-          "settings put system pointer_speed 15",
+          "settings put system pointer_speed 7",
           "settings put system touch_slop 0",
           "settings put secure touch_blocking_period 0.0",
           "settings put secure tap_duration_threshold 0.0",
@@ -44,7 +44,7 @@
         "order": 2,
         "section": "aim_profiles",
         "commands": [
-          "settings put system pointer_speed 14",
+          "settings put system pointer_speed 7",
           "settings put system touch_slop 0",
           "settings put secure touch_blocking_period 0.0",
           "settings put secure tap_duration_threshold 0.0",
@@ -67,7 +67,7 @@
         "order": 3,
         "section": "aim_profiles",
         "commands": [
-          "settings put system pointer_speed 14",
+          "settings put system pointer_speed 7",
           "settings put system touch_slop 0",
           "settings put secure touch_blocking_period 0.0",
           "settings put secure tap_duration_threshold 0.0",
@@ -87,7 +87,7 @@
         "order": 4,
         "section": "aim_profiles",
         "commands": [
-          "settings put system pointer_speed 12",
+          "settings put system pointer_speed 7",
           "settings put system touch_slop 2",
           "settings put secure touch_blocking_period 0.0",
           "settings put secure tap_duration_threshold 0.0",
@@ -107,7 +107,7 @@
         "order": 5,
         "section": "aim_profiles",
         "commands": [
-          "settings put system pointer_speed 13",
+          "settings put system pointer_speed 7",
           "settings put system touch_slop 1",
           "settings put secure touch_blocking_period 0.0",
           "settings put secure tap_duration_threshold 0.0",
