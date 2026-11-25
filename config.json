@@ -1,5 +1,5 @@
 {
-  "version": 7,
+  "version": 8,
   "schema_version": 1,
   "payload": {
     "max_fps": 144,
@@ -34,14 +34,42 @@
         ]
       },
       {
+        "id": "hyper_direct",
+        "label": "2 · HYPER-TOUCH CORE (DIRECT)",
+        "badge": "DIRECT BUS • C++ DSP",
+        "description": "Прямой канал отклика с нативным C++ DSP (One-Euro / Snap / Flick Pro), отдельной панелью кривой срыва и живым замером FPS/мс кадра.",
+        "enabled": true,
+        "confirm": false,
+        "requires": "shizuku",
+        "order": 2,
+        "section": "aim_profiles",
+        "commands": [
+          "settings put system pointer_speed 7",
+          "settings put system touch_slop 0",
+          "settings put secure touch_blocking_period 0.0",
+          "settings put secure tap_duration_threshold 0.0",
+          "settings put secure multi_press_timeout 80",
+          "settings put system motion_engine_enabled 0",
+          "settings put global window_animation_scale 0.0",
+          "settings put global transition_animation_scale 0.0",
+          "settings put global animator_duration_scale 0.0",
+          "settings put global block_untrusted_touches 0",
+          "setprop debug.input.resample 0",
+          "setprop debug.input.batching 0",
+          "setprop debug.sf.disable_backpressure 1",
+          "device_config put input_native_boot deep_press_enabled false",
+          "device_config put sensors high_sampling_rate_sensors_enabled true"
+        ]
+      },
+      {
         "id": "extreme",
-        "label": "2 · ТЕЛЕПОРТ УЛЬТРА",
+        "label": "3 · ТЕЛЕПОРТ УЛЬТРА",
         "badge": "QUANTUM SNAP • 68.0X",
         "description": "Экстремальный квантовый телепорт. Сглаживание убито в ноль. Прицел прыгает чёткими пиксельными рывками без инерции.",
         "enabled": true,
         "confirm": false,
         "requires": "shizuku",
-        "order": 2,
+        "order": 3,
         "section": "aim_profiles",
         "commands": [
           "settings put system pointer_speed 7",
@@ -58,13 +86,13 @@
       },
       {
         "id": "quantum_chunks",
-        "label": "3 · КВАНТОВЫЙ ОТКЛИК (ZERO-LAG)",
+        "label": "4 · КВАНТОВЫЙ ОТКЛИК (ZERO-LAG)",
         "badge": "ZERO-RESAMPLE • SHIZUKU",
         "description": "Максимально чистый системный отклик касаний через Shizuku: отключён ресемплинг, батчинг ввода и задержка тача без оверлеев и макросов.",
         "enabled": true,
         "confirm": false,
         "requires": "shizuku",
-        "order": 3,
+        "order": 4,
         "section": "aim_profiles",
         "commands": [
           "settings put system pointer_speed 7",
@@ -85,13 +113,13 @@
       },
       {
         "id": "rog_pro",
-        "label": "4 · КОНФИГ ROG PHONE",
+        "label": "5 · КОНФИГ ROG PHONE",
         "badge": "ASUS ROG • 720HZ X-MODE",
         "description": "Сенса игрового смартфона ASUS ROG Phone 8/9 Pro: сверхрезкий срыв с места, агрессивные края и мгновенный флик без задержки.",
         "enabled": true,
         "confirm": false,
         "requires": "shizuku",
-        "order": 4,
+        "order": 5,
         "section": "aim_profiles",
         "commands": [
           "settings put system pointer_speed 7",
@@ -105,13 +133,13 @@
       },
       {
         "id": "ios_pro",
-        "label": "5 · КОНФИГ iOS",
+        "label": "6 · КОНФИГ iOS",
         "badge": "IPHONE 16 PRO / IPAD • 240HZ",
         "description": "Точная копия сенсы iOS ProMotion: идеально линейная траектория без инерции Android и плотная фиксация спрея в голову.",
         "enabled": true,
         "confirm": false,
         "requires": "shizuku",
-        "order": 5,
+        "order": 6,
         "section": "aim_profiles",
         "commands": [
           "settings put system pointer_speed 7",
@@ -125,13 +153,13 @@
       },
       {
         "id": "budget_pro",
-        "label": "6 · ДЛЯ БЮДЖЕТОК И A57",
+        "label": "7 · ДЛЯ БЮДЖЕТОК И A57",
         "badge": "ANTI-LAG FPS • 48.0X",
         "description": "Резкая телепорт-сенса + защита от просадок FPS на Samsung A57/A55, Redmi, Poco и Realme (SkiaGL кэш 72MB).",
         "enabled": true,
         "confirm": false,
         "requires": "shizuku",
-        "order": 6,
+        "order": 7,
         "section": "aim_profiles",
         "commands": [
           "settings put system pointer_speed 7",
@@ -148,13 +176,13 @@
       },
       {
         "id": "tablet_pro",
-        "label": "7 · КОНФИГ ПЛАНШЕТ (PAD PRO)",
+        "label": "8 · КОНФИГ ПЛАНШЕТ (PAD PRO)",
         "badge": "ANDROID PAD / IPAD • 144HZ",
         "description": "Специальный профиль под планшеты (Xiaomi Pad, Samsung Tab, Poco Pad, Lenovo Y700): адаптированный шаг сенсы под большой экран и нулевая задержка.",
         "enabled": true,
         "confirm": false,
         "requires": "shizuku",
-        "order": 7,
+        "order": 8,
         "section": "aim_profiles",
         "commands": [
           "settings put system pointer_speed 7",
@@ -169,34 +197,6 @@
           "settings put global block_untrusted_touches 0",
           "setprop debug.input.resample 0",
           "setprop debug.input.batching 0"
-        ]
-      },
-      {
-        "id": "hyper_direct",
-        "label": "8 · HYPER-TOUCH CORE (DIRECT)",
-        "badge": "DIRECT BUS • 0.1MS",
-        "description": "Отдельный профиль прямого отклика (для приваток): подключает нативный C++ канал ввода (/dev/uinput при наличии прав) + отключает ресемплинг, батчинг и задержку сенсора.",
-        "enabled": true,
-        "confirm": false,
-        "requires": "shizuku",
-        "order": 8,
-        "section": "aim_profiles",
-        "commands": [
-          "settings put system pointer_speed 7",
-          "settings put system touch_slop 0",
-          "settings put secure touch_blocking_period 0.0",
-          "settings put secure tap_duration_threshold 0.0",
-          "settings put secure multi_press_timeout 100",
-          "settings put system motion_engine_enabled 0",
-          "settings put global window_animation_scale 0.0",
-          "settings put global transition_animation_scale 0.0",
-          "settings put global animator_duration_scale 0.0",
-          "settings put global block_untrusted_touches 0",
-          "setprop debug.input.resample 0",
-          "setprop debug.input.batching 0",
-          "setprop debug.sf.disable_backpressure 1",
-          "device_config put input_native_boot deep_press_enabled false",
-          "device_config put sensors high_sampling_rate_sensors_enabled true"
         ]
       }
     ]
